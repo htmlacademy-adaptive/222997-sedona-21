@@ -15,9 +15,23 @@
 }
 
 .booking__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 58px;
   background-color: @blue-bg;
   color: @white;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+
+  &:hover {
+    background-color: @blue-button-hover;
+  }
+
+  &:active {
+    background-color: @blue-button-active;
+    color: fadeout(@white, 30%);
+  }
 }
