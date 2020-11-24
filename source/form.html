@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -17,16 +18,16 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">Фото и видео</a>
+            <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Форма отзыва</a>
+            <a class="main-nav__link" href="#">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Htmlacademy</a>
+            <a class="main-nav__link" href="#">Htmlacademy</a>
           </li>
         </ul>
       </div>
@@ -49,7 +50,7 @@
     <form class="reviews-form" action="https://echo.htmlacademy.ru/">
 
       <div class="reviews-form__name-block">
-        <h3 class="reviews-form__title">Представьтесь</h3>
+        <h3 class="reviews-form__title">Представьтесь:</h3>
 
         <label class="reviews-form__label" for="name">Имя*:</label>
         <input class="reviews-form__input" type="text" name="name" id="name" placeholder="Петр" required>
@@ -62,7 +63,7 @@
       </div>
 
       <div class="reviews-form__contact-block">
-        <h3 class="reviews-form__title">Представьтесь</h3>
+        <h3 class="reviews-form__title">Контактная информация:</h3>
 
         <label class="reviews-form__label" for="phone">Контактный телефон*:</label>
         <input class="reviews-form__input" type="number" name="phone" id="phone" placeholder="Введите телефон" required>
@@ -76,49 +77,49 @@
         <ul class="impression__list">
           <li class="impression__item">
             <input class="impression__input" type="checkbox" name="positive" id="positive" checked>
-            <label for="impression__label">Скорее положительное</label>
+            <label class="impression__label" for="positive">Скорее положительное</label>
           </li>
 
           <li class="impression__item">
             <input class="impression__input" type="checkbox" name="negative" id="negative">
-            <label for="impression__label">Отрицательное</label>
+            <label class="impression__label" for="impression__label">Отрицательное</label>
           </li>
 
           <li class="impression__item">
             <input class="impression__input" type="checkbox" name="skip" id="skip">
-            <label for="impression__label">Затрудняюсь ответить</label>
+            <label class="impression__label" for="impression__label">Затрудняюсь ответить</label>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="Visited">
+      <fieldset class="visited">
         <legend class="visited__title">Посещенные достопримечательности:</legend>
         <ul class="visited__list">
 
           <li class="visited__item">
             <input class="visited__input" type="checkbox" name="bridge" id="bridge" checked>
-            <label for="visited__label">Мост дьявола</label>
+            <label class="visited__label" for="bridge">Мост дьявола</label>
           </li>
 
           <li class="visited__item">
             <input class="visited__input" type="checkbox" name="mountain" id="mountain" checked>
-            <label for="visited__label">Гора-Колокол</label>
+            <label class="visited__label" for="mountain">Гора-Колокол</label>
           </li>
 
           <li class="visited__item">
-            <input class="visited__input" type="checkbox" name="pakr" id="park" checked>
-            <label for="visited__label">Слайд-парк</label>
+            <input class="visited__input" type="checkbox" name="park" id="park" checked>
+            <label class="visited__label" for="park">Слайд-парк</label>
           </li>
 
           <li class="visited__item">
             <input class="visited__input" type="checkbox" name="rocks" id="rocks">
-            <label for="visited__label">Красные скалы</label>
+            <label class="visited__label" for="rocks">Красные скалы</label>
           </li>
         </ul>
       </fieldset>
 
       <div class="form-letter">
-        <label for="form-letter__label">Опишите свои эмоции:</label>
+        <label class="form-letter__label" for="letter">Опишите свои эмоции:</label>
         <textarea class="form-letter__textarea" name="letter" id="letter" rows="4"
           placeholder="Опишите подробно все свои восторги" required></textarea>
       </div>
