@@ -1,0 +1,51 @@
+.reviews-form__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.reviews-form__label {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.reviews-form__input {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  border-style: none;
+  background-color: @grey-form-bg;
+  // Или в макете для примера введены черным?
+  &::placeholder {
+    color: @black;
+  }
+}
+
+.reviews-form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 58px;
+  background-color: @blue-bg;
+  color: @white;
+  border-style: none;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @blue-button-hover;
+    outline: none;
+    border: none;
+  }
+
+  &:active {
+    background-color: @blue-button-active;
+    color: fadeout(@white, 30%);
+    outline: none;
+    border: none;
+  }
+}
