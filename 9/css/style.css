@@ -363,6 +363,12 @@ a {
   background-color: #81B3D2;
   height: 223px;
 }
+@media (min-width: 768px) {
+  .main-nav {
+    background-color: #FFFFFF;
+    height: 56px;
+  }
+}
 .main-nav__toggle {
   width: 22px;
   height: 22px;
@@ -390,6 +396,11 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .main-nav__link {
+    color: #000000;
+  }
 }
 .advantages {
   text-align: center;
@@ -523,9 +534,15 @@ a {
 }
 .social {
   display: flex;
+  gap: 6px;
 }
 .social__link {
   background-color: #81B3D2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
 }
 .social__link:hover {
   background-color: #669EC0;
