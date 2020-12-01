@@ -1,7 +1,11 @@
 .main-nav {
   background-color: @blue-bg;
-  // text-align: center;
   height: 223px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white-bg;
+    height: 56px;
+  }
 }
 
 .main-nav__toggle {
@@ -31,4 +35,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+  }
 }
