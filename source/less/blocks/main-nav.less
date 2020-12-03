@@ -2,7 +2,7 @@
   background-color: @blue-bg;
   height: 223px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     background-color: @white-bg;
     height: 56px;
   }
@@ -13,7 +13,7 @@
   height: 22px;
   background-color: @blue-bg;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: none;
   }
 }
@@ -21,7 +21,7 @@
 .main-nav__list {
   list-style: none;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +36,7 @@
   text-decoration: none;
   color: @white;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     color: @black;
   }
 }

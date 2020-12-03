@@ -1,3 +1,7 @@
+// * {
+//   outline: 1px solid rgb(29, 95, 38);
+// }
+
 *,
 *::before,
 *::after {
@@ -7,12 +11,15 @@
 .page__body {
   .font;
   width: 320px;
-  padding: 0 20px;
   margin: 0 auto;
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 768px;
+  }
+
+  @media @desktop {
+    width: 1200px;
   }
 }
 

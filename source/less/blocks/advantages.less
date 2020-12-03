@@ -14,3 +14,17 @@
   line-height: 26px;
   font-weight: 400;
 }
+
+.advantages__list {
+  @media @tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media @tablet {
+  .advantage__item--third {
+    order: 3;
+  }
+}
