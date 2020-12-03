@@ -1,7 +1,46 @@
+
+.reviews-form {
+  @media @tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.reviews-form__name-block {
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.reviews-form__contact-block {
+  @media @tablet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.reviews-form__title--grid {
+  @media @desktop {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+  }
+}
+
 .reviews-form__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0;
 }
 
 .reviews-form__label {
