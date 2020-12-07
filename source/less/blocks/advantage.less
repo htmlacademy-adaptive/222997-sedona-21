@@ -1,8 +1,13 @@
 .advantage {
   background-color: @blue-bg;
+  height: 206px;
 
   &--grey {
     background-color: @grey-bg;
+  }
+
+  &--grey:not(:last-child) {
+    border-bottom: 1px solid #d6d6d6;
   }
 
   @media @tablet {
@@ -11,9 +16,11 @@
 }
 
 .advantage__title {
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  padding-top: 34px;
 }
 
 .advantage__number {

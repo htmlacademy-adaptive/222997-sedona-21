@@ -1,11 +1,24 @@
 .page-header {
+  position: relative;
   background-color: #ffffff;
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 279px;
+
+  @media @tablet {
+    height: 56px;
+  }
 }
 
 .page-header__logo {
-  text-align: center;
   order: 2;
+  position: absolute;
+  top: 263px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media @tablet {
+    top: 43px;
+  }
 }
