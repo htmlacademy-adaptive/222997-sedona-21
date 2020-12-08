@@ -16,3 +16,37 @@
   line-height: 24px;
   font-weight: 700;
 }
+
+.photo__list {
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+
+  @media @desktop {
+    width: 1200px;
+  }
+}
+
+.photo__item {
+  &--big {
+    @media @tablet {
+      width: 648px;
+    }
+
+    @media @desktop {
+      width: 1200px;
+    }
+  }
+
+  &--small {
+    @media @tablet {
+      width: 324px;
+    }
+
+    @media @desktop {
+      width: 400px;
+    }
+  }
+}

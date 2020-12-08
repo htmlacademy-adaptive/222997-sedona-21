@@ -1,5 +1,17 @@
 .advantages-big-block {
-  background-color: @blue-bg;
   color: @white;
-  text-align: center;
+}
+
+.advantages-big-block__wrapper {
+  @media @tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.advantages-big-block__pic--reverse {
+  @media @tablet {
+    flex-direction: row-reverse;
+  }
 }
