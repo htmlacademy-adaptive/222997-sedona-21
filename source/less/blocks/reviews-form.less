@@ -28,19 +28,19 @@
   }
 }
 
-.reviews-form__title--grid {
-  @media @desktop {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    justify-self: center;
-  }
-}
-
 .reviews-form__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   margin: 0;
+
+  &--grid {
+    @media @desktop {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      justify-self: center;
+    }
+  }
 }
 
 .reviews-form__label {
