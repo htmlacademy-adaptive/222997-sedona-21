@@ -18,27 +18,27 @@
 
 .intro__wrapper {
   position: relative;
-}
 
-.intro__wrapper::before {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 57px;
-  top: 242px;
-  left: -19px;
-  background-image: url("../img/intro-triangle.svg");
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 57px;
+    top: 242px;
+    left: -19px;
+    background-image: url("../img/intro-triangle.svg");
 
-  @media @tablet {
-    width: 768px;
-    left: -154px;
-    top: 371px;
-    background-image: url("../img/intro-triangle-table.svg");
-  }
+    @media @tablet {
+      width: 768px;
+      left: -154px;
+      top: 371px;
+      background-image: url("../img/intro-triangle-table.svg");
+    }
 
-  @media @desktop {
-    width: 1200px;
-    left: -369px;
-    background-image: url("../img/intro-triangle-desktop.svg");
+    @media @desktop {
+      width: 1200px;
+      left: -369px;
+      background-image: url("../img/intro-triangle-desktop.svg");
+    }
   }
 }

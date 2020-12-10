@@ -1,6 +1,8 @@
 .advantage {
   background-color: @blue-bg;
-  height: 206px;
+  min-height: 206px;
+  padding-top: 32px;
+  padding-bottom: 40px;
 
   &--grey {
     background-color: @grey-bg;
@@ -8,10 +10,22 @@
 
   &--grey:not(:last-child) {
     border-bottom: 1px solid #d6d6d6;
+
+    @media @tablet {
+      border: none;
+    }
   }
 
   @media @tablet {
     width: 256px;
+    height: 256px;
+    padding: 45px 30px 50px 30px;
+  }
+
+  @media @desktop {
+    width: 400px;
+    height: 256px;
+    padding: 45px 55px 50px 55px;
   }
 }
 
@@ -20,16 +34,27 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  padding-top: 34px;
+
+  @media @tablet {
+    padding: 0 20px;
+  }
+
+  @media @desktop {
+    padding: 0 80px;
+  }
 }
 
 .advantage__number {
+  display: block;
+  margin-top: 20px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
 
 .advantage__text {
+  margin: 0;
+  margin-top: 25px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
