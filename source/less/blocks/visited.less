@@ -1,5 +1,5 @@
 .visited {
-  border-style: none;
+  padding-top: 65px;
 
   @media @tablet {
     grid-column-start: 1;
@@ -9,6 +9,8 @@
 }
 
 .visited__title {
+  text-align: center;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -22,12 +24,31 @@
 }
 
 .visited__list {
+  padding-top: 45px;
+  padding-left: 75px;
+
   @media @tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
   }
 
   @media @desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.visited__item:not(:first-child) {
+  margin-top: 60px;
+
+  @media @tablet {
+    margin-top: 70px;
+  }
+}
+
+.visited__item {
+  @media @tablet {
+    justify-self: center;
+    margin-top: 70px;
   }
 }
