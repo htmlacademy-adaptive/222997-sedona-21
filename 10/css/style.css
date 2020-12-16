@@ -854,6 +854,11 @@ a {
     height: 290px;
   }
 }
+@media (min-width: 1200px) {
+  .reviews__intro {
+    width: 1200px;
+  }
+}
 .reviews__pic {
   margin: 0;
   width: 229px;
@@ -883,8 +888,14 @@ a {
   .reviews-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
     width: 648px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews-form {
+    width: 960px;
   }
 }
 .reviews-form__name-block {
@@ -944,6 +955,11 @@ a {
     width: 648px;
   }
 }
+@media (min-width: 1200px) {
+  .reviews-form__input--contact {
+    width: 257px;
+  }
+}
 .reviews-form__input::-moz-placeholder {
   color: #000000;
 }
@@ -972,8 +988,10 @@ a {
 }
 @media (min-width: 1200px) {
   .reviews-form__contact-block {
+    width: 960px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
   }
 }
 .reviews-form__button {
@@ -1048,6 +1066,12 @@ a {
     grid-column-start: 1;
     grid-column-end: 3;
     justify-self: center;
+    width: 648px;
+  }
+}
+@media (min-width: 1200px) {
+  .visited {
+    width: 960px;
   }
 }
 .visited__title {
@@ -1096,6 +1120,7 @@ a {
 .form-letter {
   display: flex;
   flex-direction: column;
+  padding-top: 50px;
 }
 @media (min-width: 768px) {
   .form-letter {
@@ -1119,7 +1144,13 @@ a {
   border: none;
   min-height: 160px;
   padding: 15px 15px;
+  margin-top: 20px;
   background-color: #F2F2F2;
+}
+@media (min-width: 768px) {
+  .form-letter__textarea {
+    margin-top: 60px;
+  }
 }
 .form-letter__textarea::-moz-placeholder {
   color: #000000;
