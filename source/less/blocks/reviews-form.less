@@ -4,8 +4,13 @@
   @media @tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
     width: 648px;
     margin: 0 auto;
+  }
+
+  @media @desktop {
+    width: 960px;
   }
 }
 
@@ -69,6 +74,10 @@
     @media @tablet {
       width: 648px;
     }
+
+    @media @desktop {
+      width: 257px;
+    }
   }
 
   &::placeholder {
@@ -98,8 +107,10 @@
   }
 
   @media @desktop {
+    width: 960px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
   }
 }
 
