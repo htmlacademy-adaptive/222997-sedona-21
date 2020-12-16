@@ -11,33 +11,35 @@
 <body class="page__body">
 
   <header class="page-header">
+
     <a class="page-header__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Седона">
+      <img src="img\logotype-mobile.svg" width="101" height="84" alt="Седона">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle"></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Фото и видео</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Форма отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Htmlacademy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="index.html">Главная</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">Форма отзыва</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="htmlacademy.ru">Htmlacademy</a>
+      </li>
+    </ul>
+
+    <button class="main-nav__toggle"></button>
   </header>
 
   <main class="page-main">
 
     <section class="reviews">
+      <div class="reviews__intro">
+        <img class="reviews__pic" src="img\sedona.svg" alt="Седона">
+      </div>
       <h2 class="visually-hidden">Здесь вы можете оставить свой отзыв</h2>
 
       <div class="reviews__wrapper">
@@ -52,29 +54,37 @@
 
       <div class="reviews-form__name-block">
         <h3 class="reviews-form__title">Представьтесь:</h3>
-
-        <label class="reviews-form__label" for="name">Имя*:</label>
-        <input class="reviews-form__input" type="text" name="name" id="name" placeholder="Петр" required>
-
-        <label class="reviews-form__label" for="surname">Фамилия*:</label>
-        <input class="reviews-form__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
-
-        <label class="reviews-form__label" for="patronymic">Отчество:</label>
-        <input class="reviews-form__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+        <label class="reviews-form__label reviews-form__label--name" for="name">
+          <p>Имя*:</p>
+          <input class="reviews-form__input reviews-form__input--big" type="text" name="name" id="name"
+            placeholder="Петр" required>
+        </label>
+        <label class="reviews-form__label reviews-form__label--name" for="surname">
+          <p>Фамилия*:</p>
+          <input class="reviews-form__input reviews-form__input--small" type="text" name="surname" id="surname"
+            placeholder="Иванов" required>
+        </label>
+        <label class="reviews-form__label reviews-form__label--name" for="patronymic">
+          <p>Отчество:</p>
+          <input class="reviews-form__input reviews-form__input--small" type="text" name="patronymic" id="patronymic"
+            placeholder="Александрович">
+        </label>
       </div>
 
       <div class="reviews-form__contact-block">
         <h3 class="reviews-form__title reviews-form__title--grid">Контактная информация:</h3>
 
-        <label class="reviews-form__label" for="phone">Контактный телефон*:</label>
-        <input class="reviews-form__input" type="number" name="phone" id="phone" placeholder="Введите телефон" required>
+        <label class="reviews-form__label reviews-form__label--contact" for="phone">Контактный телефон*:</label>
+        <input class="reviews-form__input reviews-form__input--contact" type="number" name="phone" id="phone"
+          placeholder="Введите телефон" required>
 
-        <label class="reviews-form__label" for="email">Электронная почта*:</label>
-        <input class="reviews-form__input" type="text" name="email" id="email" placeholder="Введите e-mail" required>
+        <label class="reviews-form__label reviews-form__label--contact" for="email">Электронная почта*:</label>
+        <input class="reviews-form__input reviews-form__input--contact" type="text" name="email" id="email"
+          placeholder="Введите e-mail" required>
       </div>
 
-      <fieldset class="impression">
-        <legend class="impression__title">Ваше общее впечатление:</legend>
+      <div class="impression">
+        <h3 class="impression__title">Ваше общее впечатление:</h3>
         <ul class="impression__list">
           <li class="impression__item">
             <input class="impression__input" type="checkbox" name="positive" id="positive" checked>
@@ -91,13 +101,13 @@
             <label class="impression__label" for="impression__label">Затрудняюсь ответить</label>
           </li>
         </ul>
-      </fieldset>
+      </div>
 
-      <fieldset class="visited">
-        <legend class="visited__title">Посещенные достопримечательности:</legend>
+      <div class="visited">
+        <h3 class="visited__title">Посещенные достопримечательности:</h3>
         <ul class="visited__list">
 
-          <li class="visited__item">
+          <li class="visited__item visited__item--first">
             <input class="visited__input" type="checkbox" name="bridge" id="bridge" checked>
             <label class="visited__label" for="bridge">Мост дьявола</label>
           </li>
@@ -117,7 +127,7 @@
             <label class="visited__label" for="rocks">Красные скалы</label>
           </li>
         </ul>
-      </fieldset>
+      </div>
 
       <div class="form-letter">
         <label class="form-letter__label" for="letter">Опишите свои эмоции:</label>
@@ -135,7 +145,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
 
-      <h2 class="main-footer__slogan">#Visitsedona</h2>
+      <b class="main-footer__hashtag">#Visitsedona</b>
 
       <ul class="social main-footer__social">
         <li class="social__item">
@@ -152,7 +162,7 @@
       <div class="develop main-footer__develop">
         <h3 class="develop__title">Разработано</h3>
         <a class="develop__link" href="https://htmlacademy.ru/" target="blank">
-          <img class="develop__logo" src="https://via.placeholder.com/50x50" alt="Htmlacademy">
+          <img class="develop__logo" src="https://via.placeholder.com/25x25" alt="Htmlacademy">
         </a>
       </div>
 

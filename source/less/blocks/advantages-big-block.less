@@ -8,10 +8,43 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  &--reverse {
+    @media @tablet {
+      flex-direction: row-reverse;
+    }
+  }
 }
 
-.advantages-big-block__pic--reverse {
-  @media @tablet {
-    flex-direction: row-reverse;
+.advantages-big-block__pic {
+  width: 320px;
+  height: 256px;
+
+  &--town {
+    background-image: url("../img/photo-city-mob.jpg");
+
+    @media @tablet {
+      width: 512px;
+      background-image: url("../img/photo-city-tablet.jpg");
+    }
+
+    @media @desktop {
+      width: 800px;
+      background-image: url("../img/photo-city-desktop.jpg");
+    }
+  }
+
+  &--brige {
+    background-image: url("../img/photo-bridge-mob.jpg");
+
+    @media @tablet {
+      width: 512px;
+      background-image: url("../img/photo-bridge-tablet.jpg");
+    }
+
+    @media @desktop {
+      width: 800px;
+      background-image: url("../img/photo-bridge-desktop.jpg");
+    }
   }
 }

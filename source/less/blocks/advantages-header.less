@@ -1,21 +1,42 @@
 .advantages-header {
+  position: relative;
   height: 226px;
+  padding: 40px 30px;
+
+  @media @tablet {
+    padding: 40px 125px;
+  }
+
+  @media @desktop {
+    padding: 40px 355px;
+  }
 }
 
 .advantages-header__title {
-  margin: 0 auto;
-  padding-top: 32px;
-  width: 255px;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
 
 .advantages-header__text {
-  margin: 0 auto;
-  padding-top: 30px;
-  width: 250px;
+  margin: 0;
+  margin-top: 44px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 37px;
+    top: 208px;
+    left: 0;
+    background-image: url("../img/white-triangle.png");
+
+    @media @tablet {
+      display: none;
+    }
+  }
 }

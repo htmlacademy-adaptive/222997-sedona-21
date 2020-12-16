@@ -1,15 +1,28 @@
 .impression {
-  border-style: none;
+  padding-top: 50px;
 
   @media @tablet {
     grid-row: 1 / 1;
+    padding-top: 0;
   }
 }
 
 .impression__title {
+  display: flex;
+  justify-content: center;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.impression__list {
+  margin-top: 40px;
+  padding-left: 75px;
+}
+
+.impression__item:not(:first-child) {
+  margin-top: 50px;
 }
 
 .impression__label {

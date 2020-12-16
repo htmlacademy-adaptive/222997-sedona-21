@@ -1,4 +1,8 @@
 .form-letter {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+
   @media @tablet {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -9,6 +13,7 @@
 }
 
 .form-letter__label {
+  text-align: center;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -18,6 +23,14 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  border: none;
+  min-height: 160px;
+  padding: 15px 15px;
+  margin-top: 20px;
+
+  @media @tablet {
+    margin-top: 60px;
+  }
 
   &::placeholder {
     color: @black;

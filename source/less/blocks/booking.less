@@ -1,30 +1,36 @@
 .booking__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 287px;
-  padding: 0 20px;
+  text-align: center;
+  min-height: 287px;
+  padding: 40px 20px 20px;
+
+  @media @tablet {
+    min-height: 318px;
+  }
 }
 
 .booking__title {
+  margin: 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
 .booking__text {
+  margin: 0;
+  margin-top: 30px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  text-align: center;
 }
 
 .booking__button {
   display: flex;
   justify-content: center;
+  align-self: center;
   align-items: center;
-
+  margin-top: 30px;
   width: 280px;
   height: 58px;
   background-color: @blue-bg;
@@ -32,6 +38,10 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    width: 458px;
+  }
 
   &:hover {
     background-color: @blue-button-hover;

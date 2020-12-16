@@ -3,6 +3,52 @@
   justify-content: center;
   padding-top: 90px;
   height: 389px;
-  background-color: wheat;
   background-image: url("../img/back-mobile.jpg");
+
+  @media @tablet {
+    height: 518px;
+    background-image: url("../img/back-table.jpg");
+  }
+
+  @media @desktop {
+    background-image: url("../img/back-desktop.jpg");
+    height: 518px;
+  }
+}
+
+.intro__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 57px;
+    top: 242px;
+    left: -19px;
+    background-image: url("../img/intro-triangle.svg");
+
+    @media @tablet {
+      width: 768px;
+      left: -154px;
+      top: 371px;
+      background-image: url("../img/intro-triangle-table.svg");
+    }
+
+    @media @desktop {
+      width: 1200px;
+      left: -369px;
+      background-image: url("../img/intro-triangle-desktop.svg");
+    }
+  }
+}
+
+.intro__background {
+  width: 282px;
+  height: 214px;
+
+  @media @tablet {
+    width: 461px;
+    height: 350px;
+  }
 }
