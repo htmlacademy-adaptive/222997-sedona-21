@@ -6,6 +6,7 @@
   background-image: url("../img/back-mobile.jpg");
 
   @media @tablet {
+    padding-top: 78px;
     height: 518px;
     background-image: url("../img/back-table.jpg");
   }
@@ -25,19 +26,18 @@
     width: 320px;
     height: 57px;
     top: 242px;
-    left: -19px;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url("../img/intro-triangle.svg");
 
     @media @tablet {
       width: 768px;
-      left: -154px;
-      top: 371px;
+      top: 384px;
       background-image: url("../img/intro-triangle-table.svg");
     }
 
     @media @desktop {
       width: 1200px;
-      left: -369px;
       background-image: url("../img/intro-triangle-desktop.svg");
     }
   }
