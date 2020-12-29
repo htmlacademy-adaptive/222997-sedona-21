@@ -52,35 +52,36 @@
 
     <form class="reviews-form" action="https://echo.htmlacademy.ru/">
 
-      <div class="reviews-form__name-block">
-        <h3 class="reviews-form__title">Представьтесь:</h3>
-        <label class="reviews-form__label reviews-form__label--name" for="name">
+      <div class="introduce">
+        <h3 class="introduce__title">Представьтесь:</h3>
+        <label class="introduce__label introduce__label--first" for="name">
           <p>Имя*:</p>
-          <input class="reviews-form__input reviews-form__input--big" type="text" name="name" id="name"
-            placeholder="Петр" required>
+          <input class="introduce__input base-input" type="text" name="name" id="name" placeholder="Петр" required>
         </label>
-        <label class="reviews-form__label reviews-form__label--name" for="surname">
+        <label class="introduce__label" for="surname">
           <p>Фамилия*:</p>
-          <input class="reviews-form__input reviews-form__input--small" type="text" name="surname" id="surname"
-            placeholder="Иванов" required>
+          <input class="introduce__input base-input" type="text" name="surname" id="surname" placeholder="Иванов"
+            required>
         </label>
-        <label class="reviews-form__label reviews-form__label--name" for="patronymic">
+        <label class="introduce__label" for="patronymic">
           <p>Отчество:</p>
-          <input class="reviews-form__input reviews-form__input--small" type="text" name="patronymic" id="patronymic"
+          <input class="introduce__input base-input" type="text" name="patronymic" id="patronymic"
             placeholder="Александрович">
         </label>
       </div>
 
-      <div class="reviews-form__contact-block">
-        <h3 class="reviews-form__title reviews-form__title--grid">Контактная информация:</h3>
-
-        <label class="reviews-form__label reviews-form__label--contact" for="phone">Контактный телефон*:</label>
-        <input class="reviews-form__input reviews-form__input--contact" type="number" name="phone" id="phone"
-          placeholder="Введите телефон" required>
-
-        <label class="reviews-form__label reviews-form__label--contact" for="email">Электронная почта*:</label>
-        <input class="reviews-form__input reviews-form__input--contact" type="text" name="email" id="email"
-          placeholder="Введите e-mail" required>
+      <div class="contacts">
+        <h3 class="contacts__title">Контактная информация:</h3>
+        <label class="contacts__label contacts__label--first" for="phone">
+          <p>Контактный телефон*:</p>
+          <input class="contacts__input base-input" type="number" name="phone" id="phone" placeholder="Введите телефон"
+            required>
+        </label>
+        <label class="contacts__label" for="email">
+          <p>Электронная почта*:</p>
+          <input class="contacts__input base-input" type="text" name="email" id="email" placeholder="Введите e-mail"
+            required>
+        </label>
       </div>
 
       <div class="impression">
@@ -93,12 +94,12 @@
 
           <li class="impression__item">
             <input class="impression__input" type="checkbox" name="negative" id="negative">
-            <label class="impression__label" for="impression__label">Отрицательное</label>
+            <label class="impression__label" for="negative">Скорее отрицательное</label>
           </li>
 
           <li class="impression__item">
             <input class="impression__input" type="checkbox" name="skip" id="skip">
-            <label class="impression__label" for="impression__label">Затрудняюсь ответить</label>
+            <label class="impression__label" for="skip">Затрудняюсь ответить</label>
           </li>
         </ul>
       </div>

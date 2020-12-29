@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @media @tablet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.contacts__label {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 20px;
+
+  &--first {
+    margin-top: 28px;
+  }
+}
+
+.contacts__label p {
+  margin: 0;
+  padding-left: 23px;
+}
+
+.contacts__input {
+  margin-top: 17px;
+}

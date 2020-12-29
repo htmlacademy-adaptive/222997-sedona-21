@@ -36,11 +36,50 @@
     }
   }
 
+  &--first::before {
+    content: "";
+    position: absolute;
+    width: 39px;
+    height: 36px;
+    // Почему-то цепляет далеко
+    top: 1386px;
+    left: 179px;
+    background-image: url(../img/icon-house.svg);
+
+    @media @tablet {
+      width: 75px;
+      height: 72px;
+    }
+  }
+
+  &--second::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    // Почему-то цепляет далеко
+    top: 1631px;
+    left: 177px;
+    background-image: url(../img/icon-burger.svg);
+  }
+
+  &--third::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 38px;
+    // Почему-то цепляет далеко
+    top: 1516px;
+    left: 183px;
+    background-image: url(../img/icon-gift.svg);
+  }
+
   @media @tablet {
     width: 256px;
     text-align: center;
 
     &--first {
+      position: relative;
       padding-left: 32px;
       padding-right: 32px;
     }
