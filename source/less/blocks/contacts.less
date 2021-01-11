@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 44px;
 
   @media @tablet {
+    padding-top: 70px;
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -11,10 +13,13 @@
 
 .contacts__title {
   margin: 0;
-  margin-top: 25px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 21px;
+  }
 }
 
 .contacts__label {
@@ -22,18 +27,26 @@
   line-height: 26px;
   font-weight: 400;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
+
+  @media @tablet {
+    margin-top: 20px;
+  }
 
   &--first {
-    margin-top: 28px;
+    margin-top: 15px;
+
+    @media @tablet {
+      margin-top: 20px;
+    }
   }
 }
 
 .contacts__label p {
   margin: 0;
-  padding-left: 23px;
+  padding-left: 20px;
 }
 
 .contacts__input {
-  margin-top: 17px;
+  margin-top: 11px;
 }

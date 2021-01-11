@@ -1,9 +1,13 @@
 .reviews__wrapper {
-  padding: 40px 20px 10px;
+  padding: 36px 20px 10px;
   text-align: center;
 
   @media @tablet {
-    padding: 60px 20px 10px;
+    padding: 58px 165px 10px;
+  }
+
+  @media @desktop {
+    padding: 123px 370px 10px;
   }
 }
 
@@ -17,7 +21,7 @@
   background-position: 50% 0;
 
   @media @tablet {
-    padding-top: 100px;
+    padding-top: 90px;
     width: 768px;
     height: 290px;
   }
@@ -41,12 +45,20 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 30px;
+  }
 }
 
 .reviews__text {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 28px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+
+  @media @tablet {
+    margin-top: 35px;
+  }
 }

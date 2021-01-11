@@ -1,7 +1,7 @@
 .form-letter {
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 60px;
 
   @media @tablet {
     grid-column-start: 1;
@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-self: stretch;
+    padding-top: 65px;
   }
 }
 
@@ -17,6 +18,10 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 21px;
+  }
 }
 
 .form-letter__textarea {
@@ -25,7 +30,7 @@
   font-weight: 700;
   border: none;
   min-height: 160px;
-  padding: 15px 15px;
+  padding: 8px 20px;
   margin-top: 20px;
 
   @media @tablet {

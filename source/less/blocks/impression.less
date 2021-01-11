@@ -1,5 +1,5 @@
 .impression {
-  padding-top: 50px;
+  padding-top: 46px;
 
   @media @tablet {
     grid-row: 1 / 1;
@@ -14,15 +14,32 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    justify-content: flex-start;
+    font-size: 21px;
+  }
+
+  @media @desktop {
+    padding-left: 80px;
+  }
 }
 
 .impression__list {
-  margin-top: 40px;
+  margin-top: 37px;
   padding-left: 75px;
+
+  @media @tablet {
+    margin-top: 70px;
+  }
 }
 
 .impression__item:not(:first-child) {
-  margin-top: 50px;
+  margin-top: 43px;
+
+  @media @tablet {
+    margin-top: 52px;
+  }
 }
 
 .impression__input {

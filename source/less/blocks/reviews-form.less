@@ -1,5 +1,5 @@
 .reviews-form {
-  padding: 25px 20px;
+  padding: 27px 20px;
 
   @media @tablet {
     display: grid;
@@ -7,10 +7,12 @@
     padding: 0;
     width: 648px;
     margin: 0 auto;
+    padding-top: 76px;
   }
 
   @media @desktop {
     width: 960px;
+    padding-top: 47px;
   }
 }
 
@@ -129,6 +131,10 @@
   font-weight: 700;
   text-transform: uppercase;
 
+  @media @tablet {
+    width: 324px;
+  }
+
   &:hover {
     background-color: @blue-button-hover;
     outline: none;
@@ -144,9 +150,14 @@
 }
 
 .reviews-form__required {
+  font-size: 14px;
+  font-weight: 400;
   display: none;
 
   @media @tablet {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 15px;
   }
 }
