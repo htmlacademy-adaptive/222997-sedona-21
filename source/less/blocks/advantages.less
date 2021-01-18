@@ -9,8 +9,8 @@
   margin: 0;
   padding-left: 69px;
   padding-right: 20px;
-  padding-top: 35px;
-  padding-bottom: 36px;
+  padding-top: 33px;
+  padding-bottom: 35px;
 
   @media @tablet {
     display: flex;
@@ -18,16 +18,19 @@
     justify-content: space-between;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 158px;
+    padding-top: 157px;
     padding-bottom: 59px;
   }
 
   @media @desktop {
+    padding-top: 154px;
     padding-bottom: 80px;
   }
 }
 
 .advantages__item {
+  position: relative;
+
   &:not(:first-child) {
     margin-top: 24px;
 
@@ -41,26 +44,45 @@
     position: absolute;
     width: 39px;
     height: 36px;
-    // Почему-то цепляет далеко
-    top: 1386px;
-    left: 179px;
+    top: -11px;
+    left: -48px;
     background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media @tablet {
       width: 75px;
       height: 72px;
+      top: -102px;
+      left: 90px;
+    }
+
+    @media @desktop {
+      left: 160px;
     }
   }
 
   &--second::before {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 35px;
-    // Почему-то цепляет далеко
-    top: 1631px;
-    left: 177px;
+    width: 39px;
+    height: 36px;
+    top: -7px;
+    left: -50px;
     background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media @tablet {
+      width: 76px;
+      height: 68px;
+      top: -100px;
+      left: 89px;
+    }
+
+    @media @desktop {
+      left: 160px;
+    }
   }
 
   &--third::before {
@@ -68,10 +90,22 @@
     position: absolute;
     width: 32px;
     height: 38px;
-    // Почему-то цепляет далеко
-    top: 1516px;
-    left: 183px;
+    top: -13px;
+    left: -45px;
     background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media @tablet {
+      width: 64px;
+      height: 75px;
+      top: -105px;
+      left: 95px;
+    }
+
+    @media @desktop {
+      left: 166px;
+    }
   }
 
   @media @tablet {

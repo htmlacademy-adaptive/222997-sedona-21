@@ -9,7 +9,11 @@
     display: flex;
     flex-direction: column;
     justify-self: stretch;
-    padding-top: 65px;
+    padding-top: 87px;
+  }
+
+  @media @desktop {
+    padding-top: 80px;
   }
 }
 
@@ -21,6 +25,41 @@
 
   @media @tablet {
     font-size: 21px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -2px;
+      width: 124px;
+      height: 1px;
+      margin-right: 62px;
+      border-top: 1px solid rgb(219, 219, 219);
+
+      @media @desktop {
+        width: 280px;
+        top: 12px;
+        left: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: -63px;
+      width: 124px;
+      height: 1px;
+      margin-right: 62px;
+      border-top: 1px solid rgb(219, 219, 219);
+
+      @media @desktop {
+        width: 280px;
+        top: 12px;
+        right: -62px;
+      }
+    }
   }
 }
 
@@ -30,8 +69,8 @@
   font-weight: 700;
   border: none;
   min-height: 160px;
-  padding: 13px 20px;
-  margin-top: 20px;
+  padding: 12px 20px;
+  margin-top: 16px;
 
   @media @tablet {
     margin-top: 60px;

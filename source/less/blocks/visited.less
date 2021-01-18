@@ -24,6 +24,45 @@
   @media @tablet {
     font-size: 21px;
     padding: 0 150px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: -2px;
+      width: 124px;
+      height: 1px;
+      margin-right: 62px;
+      border-top: 1px solid rgb(219, 219, 219);
+
+      @media @desktop {
+        width: 280px;
+        top: 27px;
+        left: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      right: -63px;
+      width: 124px;
+      height: 1px;
+      margin-right: 62px;
+      border-top: 1px solid rgb(219, 219, 219);
+
+      @media @desktop {
+        width: 280px;
+        top: 27px;
+        right: -62px;
+      }
+    }
+  }
+
+  @media @desktop {
+    padding: 0 340px;
   }
 }
 
@@ -36,6 +75,34 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: none;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -78px;
+    top: -15px;
+    width: 56px;
+    height: 56px;
+    background-color: #f2f2f2;
+    border: 5px solid #f2f2f2;
+    border-radius: 10px;
+  }
+}
+
+.visited__input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -78px;
+  top: -15px;
+  width: 56px;
+  height: 56px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 .visited__list {
@@ -43,27 +110,36 @@
   padding-left: 80px;
 
   @media @tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 458px;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-top: 0;
   }
 
   @media @desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: auto;
   }
 }
 
 .visited__item:not(:first-child) {
-  margin-top: 54px;
-
-  @media @tablet {
-    margin-top: 70px;
+  @media @mobile {
+    margin-top: 54px;
   }
 }
 
 .visited__item {
   @media @tablet {
-    justify-self: center;
-    margin-top: 70px;
+    width: 202px;
+    margin-top: 60px;
+    padding-left: 80px;
+  }
+
+  @media @desktop {
+    width: auto;
   }
 }

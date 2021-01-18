@@ -4,21 +4,29 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 279px;
+
+  @media @mobile {
+    padding-bottom: 16px;
+  }
 
   @media @tablet {
-    height: 56px;
+    padding-bottom: 0;
   }
 }
 
 .page-header__logo {
   order: 2;
   position: absolute;
-  top: 266px;
+  top: 267px;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 5;
 
   @media @tablet {
     top: 43px;
+  }
+
+  @media @desktop {
+    top: 50px;
   }
 }

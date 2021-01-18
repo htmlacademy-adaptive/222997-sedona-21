@@ -13,12 +13,16 @@
   <header class="page-header">
 
     <a class="page-header__logo">
-      <img src="img\logotype-mobile.svg" width="101" height="84" alt="Седона">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img\logotype-desktop.svg" width="186" height="96">
+        <source media="(min-width: 768px)" srcset="img\logotype-tablet.svg">
+        <img src="img\logotype-mobile.svg" alt="Седона">
+      </picture>
     </a>
 
     <ul class="main-nav__list">
       <li class="main-nav__item">
-        <a class="main-nav__link" href="#">Главная</a>
+        <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
       </li>
       <li class="main-nav__item">
         <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -58,7 +62,15 @@
               <span class="advantage__number">— №1 —</span>
               <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <div class="advantages-big-block__pic advantages-big-block__pic--town"></div>
+            <div class="advantages-big-block__pic advantages-big-block__pic--town">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img\photo-city-desktop.jpg 1x, img\photo-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img\photo-city-tablet.jpg 1x, img\photo-city-tablet@2x.jpg 2x">
+                <img src="img\photo-city-mobile.jpg" srcset="img\photo-city-mobile@2x.jpg 2x" alt="Фото города">
+              </picture>
+            </div>
           </div>
         </div>
 
@@ -70,7 +82,7 @@
             </li>
             <li class="advantages__item advantages__item--third">
               <h3 class="advantage__title">Сувениры</h3>
-              <p class="advantage__text">Не&nbsp;только&nbsp;китайского, но и местного&nbsp;производства!</p>
+              <p class="advantage__text">Не&nbsp;только&nbsp;китайского, но и&nbsp;местного&nbsp;производства!</p>
             </li>
             <li class="advantages__item advantages__item--second">
               <h3 class="advantage__title">Еда</h3>
@@ -86,7 +98,15 @@
               <span class="advantage__number">— №2 —</span>
               <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <div class="advantages-big-block__pic advantages-big-block__pic--brige"></div>
+            <div class="advantages-big-block__pic advantages-big-block__pic--brige">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img\photo-bridge-desktop.jpg 1x, img\photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img\photo-bridge-tablet.jpg 1x, img\photo-bridge-tablet@2x.jpg 2x">
+                <img src="img\photo-bridge-mobile.jpg" srcset="img\photo-bridge-mobile@2x.jpg 2x" alt="Фото города">
+              </picture>
+            </div>
           </div>
         </div>
 
@@ -123,7 +143,7 @@
         <p class="booking__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие
           предложения гостиниц в
           седоне</p>
-        <a class="booking__button" href="#">Найти гостиницу</a>
+        <a class="booking__button booking__button--disabled" href="#">Найти гостиницу</a>
       </div>
     </section>
 
@@ -142,21 +162,23 @@
       <b class="main-footer__hashtag">#Visitsedona</b>
 
       <ul class="social main-footer__social">
-        <li class="social__item">
-          <a class="social__link" href="#">T</a>
+
+        <li class="social__item social__item--twitter">
+          <a class="social__link" href="#"></a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="#">F</a>
+
+        <li class="social__item social__item--fb">
+          <a class="social__link" href="#"></a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="#">Y</a>
+        <li class="social__item social__item--youtube">
+          <a class="social__link" href="#"></a>
         </li>
       </ul>
 
       <div class="develop main-footer__develop">
         <h3 class="develop__title">Разработано</h3>
         <a class="develop__link" href="https://htmlacademy.ru/" target="blank">
-          <!-- <img class="develop__logo" src="https://via.placeholder.com/25x25" alt="Htmlacademy"> -->
+          <img src="img\htmlacademy.svg" alt="Htmlacademy">
         </a>
       </div>
 

@@ -1,12 +1,16 @@
 .video {
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid rgba(229, 229, 229, 1);
   padding-top: 32px;
-  padding-bottom: 47px;
+  padding-bottom: 39px;
 
   @media @tablet {
     border: none;
     padding-top: 74px;
+  }
 
+  @media @desktop {
+    padding-top: 55px;
+    padding-bottom: 82px;
   }
 }
 
@@ -20,7 +24,6 @@
   @media @tablet {
     font-size: 30px;
   }
-
 }
 
 .video__text {
@@ -36,6 +39,10 @@
     padding: 0 155px;
     margin-top: 33px;
   }
+
+  @media @desktop {
+    padding: 0 375px;
+  }
 }
 
 .video__player {
@@ -48,6 +55,9 @@
     padding: 0 60px;
   }
 
+  @media @desktop {
+    text-align: center;
+  }
 }
 
 .video__control {
@@ -64,5 +74,3 @@
     margin-top: -114px;
   }
 }
-
-

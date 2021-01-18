@@ -4,16 +4,30 @@
   padding-top: 90px;
   height: 389px;
   background-image: url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
 
   @media @tablet {
     padding-top: 78px;
-    height: 518px;
-    background-image: url("../img/back-table.jpg");
+    height: 519px;
+    background-image: url("../img/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
   }
 
   @media @desktop {
     background-image: url("../img/back-desktop.jpg");
-    height: 518px;
+    height: 519px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
   }
 }
 

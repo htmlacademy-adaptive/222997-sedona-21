@@ -22,22 +22,96 @@
   @media @tablet {
     padding: 63px 165px 30px 165px;
   }
+
+  @media @desktop {
+    padding: 100px 382px 32px 382px;
+  }
 }
 
+
+//   padding-top: 50px;
+//   text-align: center;
+//   height: 158px;
+//   width: 320px;
+//   background-image: url("../img/form-back-mobile.jpg");
+//   background-repeat: no-repeat;
+//   background-position: 50% 0;
+
+//   @media @tablet {
+//     padding-top: 78px;
+//     height: 290px;
+//     width: 768px;
+//     background-image: url("../img/back-table.jpg");
+//   }
+// }
+
+
 .galery__background {
-  padding-top: 50px;
+  position: relative;
   text-align: center;
   height: 158px;
-  width: 320px;
-  background-image: url("../img/form-back-mobile.jpg");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-size: cover;
+  background-position: 0 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 57px;
+    top: 101px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/intro-triangle.svg");
+
+    @media @tablet {
+      width: 768px;
+      top: 232px;
+      background-image: url("../img/intro-triangle-table.svg");
+    }
+
+    @media @desktop {
+      width: 1200px;
+      top: 244px;
+      background-image: url("../img/intro-triangle-desktop.svg");
+    }
+  }
 
   @media @tablet {
-    padding-top: 78px;
-    height: 290px;
-    width: 768px;
-    background-image: url("../img/back-table.jpg");
+    height: 289px;
+    background-image: url("../img/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
+  }
+
+  @media @desktop {
+    height: 301px;
+    background-image: url("../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
+  }
+}
+
+.galery__logo {
+  margin-top: 51px;
+
+  @media @tablet {
+    margin-top: -42px;
+    width: 461px;
+    height: 350px;
+  }
+
+  @media @desktop {
+    margin-top: -34px;
   }
 }
 

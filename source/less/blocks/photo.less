@@ -6,8 +6,8 @@
   margin-top: 8px;
 
   @media @tablet {
-    margin-top: 12px;
-
+    grid-area: title;
+    margin: 0;
   }
 }
 
@@ -19,7 +19,8 @@
   margin: 0;
 
   @media @tablet {
-
+    grid-area: text;
+    margin: 0;
   }
 }
 
@@ -30,13 +31,18 @@
   font-weight: 700;
   margin-top: 13px;
   padding-left: 38px;
-  @media @tablet {
 
+  @media @tablet {
+    grid-area: like;
+    justify-self: end;
+    align-self: center;
+    padding-top: 4px;
+    padding-right: 20px;
+    margin: 0;
   }
 }
 
 .photo__list {
-
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
@@ -51,16 +57,14 @@
 
 .photo__item {
   padding: 0 20px;
-
   padding-bottom: 16px;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid rgba(229, 229, 229, 1);
+  position: relative;
 
   @media @tablet {
     border: none;
     padding: 0;
-    // padding-top: 48px;
   }
-
 
   &--big {
     @media @tablet {
@@ -80,51 +84,34 @@
 
     @media @desktop {
       width: 400px;
+      margin-top: 0;
     }
   }
 }
 
-
-// ВРЕМЕННО
 .photo__item--grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-  "title like"
-  "text like";
-  align-items: baseline;
-
   @media @tablet {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title like" "text like";
+    align-items: baseline;
     padding-top: 12px;
     padding-left: 20px;
   }
-}
 
-
-.photo__title {
-  @media @tablet {
-  grid-area: title;
-  margin: 0;
+  @media @desktop {
+    min-height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
-.photo__text {
-  @media @tablet {
-  grid-area: text;
-  margin: 0;
+.photo__pic {
+  @media @mobile {
+    margin-top: 22px;
   }
 }
-
-.photo__like {
-  @media @tablet {
-    grid-area: like;
-    justify-self: end;
-    align-self: center;
-    padding-top: 4px;
-    padding-right: 20px;
-    margin: 0;
-  }
-
-}
-
