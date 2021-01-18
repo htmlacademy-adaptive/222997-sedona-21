@@ -1,6 +1,7 @@
 .galery {
   width: 320px;
-  padding: 0 20px;
+  // padding: 0 20px;
+  // padding-top: 23px;
 
   @media @tablet {
     width: 648px;
@@ -15,14 +16,52 @@
   }
 }
 
+.galery__wrapper {
+  padding: 33px 17px 30px 20px;
+
+  @media @tablet {
+    padding: 63px 165px 30px 165px;
+  }
+}
+
+.galery__background {
+  padding-top: 50px;
+  text-align: center;
+  height: 158px;
+  width: 320px;
+  background-image: url("../img/form-back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media @tablet {
+    padding-top: 78px;
+    height: 290px;
+    width: 768px;
+    background-image: url("../img/back-table.jpg");
+  }
+}
+
 .galery__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0;
+  text-align: center;
+
+  @media @tablet {
+    font-size: 30px;
+  }
 }
 
 .galery__text {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
   font-weight: 400;
+  text-align: center;
+  margin: 0;
+  margin-top: 28px;
+
+  @media @tablet {
+    margin-top: 33px;
+  }
 }

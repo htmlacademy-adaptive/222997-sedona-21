@@ -9,6 +9,10 @@
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
+  @media @desktop {
+  }
+
 }
 
 .contacts__title {
@@ -39,12 +43,26 @@
     @media @tablet {
       margin-top: 20px;
     }
+
+    @media @desktop {
+      margin-top: 90px;
+    }
+  }
+
+  &--rename {
+    @media @desktop {
+      display: none;
+    }
   }
 }
 
 .contacts__label p {
   margin: 0;
   padding-left: 20px;
+
+  @media @desktop {
+    padding-left: 0;
+  }
 }
 
 .contacts__input {
