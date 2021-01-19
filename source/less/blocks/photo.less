@@ -3,11 +3,15 @@
   line-height: 24px;
   font-weight: 700;
   margin: 0;
-  margin-top: 8px;
+  margin-top: 11px;
 
   @media @tablet {
     grid-area: title;
     margin: 0;
+  }
+
+  @media @desktop {
+    align-self: end;
   }
 }
 
@@ -30,15 +34,42 @@
   line-height: 24px;
   font-weight: 700;
   margin-top: 13px;
-  padding-left: 38px;
+  padding-left: 37px;
+  position: relative;
 
   @media @tablet {
+    width: 52px;
     grid-area: like;
     justify-self: end;
     align-self: center;
     padding-top: 4px;
-    padding-right: 20px;
+    padding-left: 0;
     margin: 0;
+  }
+
+  @media @desktop {
+    width: 50px;
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 21px;
+    background-image: url("../img/like-icon.svg");
+
+    @media @tablet {
+      top: 3px;
+      left: -33px;
+    }
+
+    @media @desktop {
+      top: 3px;
+      left: -33px;
+    }
   }
 }
 
@@ -96,7 +127,7 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "title like" "text like";
     align-items: baseline;
-    padding-top: 12px;
+    padding-top: 16px;
     padding-left: 20px;
   }
 
@@ -107,10 +138,13 @@
     width: 100%;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 0;
   }
 }
 
 .photo__pic {
+  display: block;
+
   @media @mobile {
     margin-top: 22px;
   }

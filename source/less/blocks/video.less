@@ -1,15 +1,16 @@
 .video {
   border-top: 1px solid rgba(229, 229, 229, 1);
   padding-top: 32px;
-  padding-bottom: 39px;
+  padding-bottom: 100px;
 
   @media @tablet {
     border: none;
-    padding-top: 74px;
+    padding-top: 72px;
+    padding-bottom: 36px;
   }
 
   @media @desktop {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 82px;
   }
 }
@@ -48,7 +49,7 @@
 .video__player {
   display: block;
   margin-top: 35px;
-  // position: relative;
+  position: relative;
 
   @media @tablet {
     margin-top: 80px;
@@ -62,15 +63,53 @@
 
 .video__control {
   display: block;
-  // position: absolute;
   width: 280px;
   height: 111px;
-  background-color: grey;
-  opacity: 0.3;
-  margin: 0 auto;
+  margin: 0 20px;
   margin-top: -48px;
+  position: absolute;
 
   @media @tablet {
     margin-top: -114px;
   }
+}
+
+.video__progress-bar {
+  display: block;
+  width: 280px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video__buttons {
+  width: 280px;
+  height: 66px;
+  background-color: rgba(242, 242, 242, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.video__replay-button {
+  width: 16px;
+  height: 20px;
+  border: none;
+  background-image: url("../img/replay.svg");
+}
+
+.video__sub-button {
+  width: 32px;
+  height: 20px;
+  border: none;
+  background-image: url("../img/subtitles.svg");
+  margin-left: 105px;
+}
+
+.video__fullscreen-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-image: url("../img/fullscreen.svg");
 }
