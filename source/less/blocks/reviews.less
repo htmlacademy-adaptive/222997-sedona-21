@@ -1,38 +1,76 @@
+// .reviews {
+//   padding-top: 16px;
+
+//   @media @tablet {
+//     padding: 0;
+//   }
+// }
+
 .reviews__wrapper {
-  padding: 40px 20px 10px;
+  padding: 36px 20px 10px;
   text-align: center;
 
   @media @tablet {
-    padding: 60px 20px 10px;
+    padding: 62px 165px 10px;
+  }
+
+  @media @desktop {
+    padding: 111px 370px 10px;
   }
 }
 
 .reviews__intro {
-  padding-top: 50px;
+  position: relative;
   text-align: center;
   height: 158px;
-  width: 320px;
-  background-image: url("../img/form-back-mobile.jpg");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-size: cover;
+  background-position: 0 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 57px;
+    top: 101px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/intro-triangle.svg");
+
+    @media @tablet {
+      width: 768px;
+      top: 232px;
+      background-image: url("../img/intro-triangle-table.svg");
+    }
+
+    @media @desktop {
+      width: 1200px;
+      top: 244px;
+      background-image: url("../img/intro-triangle-desktop.svg");
+    }
+  }
 
   @media @tablet {
-    padding-top: 100px;
-    width: 768px;
-    height: 290px;
+    height: 289px;
+    background-image: url("../img/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
   }
 
   @media @desktop {
-    width: 1200px;
-  }
-}
+    height: 301px;
+    background-image: url("../img/back-desktop.jpg");
 
-.reviews__pic {
-  margin: 0;
-  width: 229px;
-
-  @media @tablet {
-    width: 460px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
   }
 }
 
@@ -41,12 +79,31 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 30px;
+  }
 }
 
 .reviews__text {
   margin: 0;
-  margin-top: 40px;
+  margin-top: 28px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+
+  @media @tablet {
+    margin-top: 35px;
+  }
+}
+
+.reviews__pic {
+  margin-top: 51px;
+  width: 229px;
+
+  @media @tablet {
+    margin-top: 100px;
+    width: 456px;
+    height: 77px;
+  }
 }

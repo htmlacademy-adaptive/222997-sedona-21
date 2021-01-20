@@ -4,7 +4,6 @@
 
   @media @tablet {
     background-color: @white-bg;
-    height: 56px;
     display: block;
   }
 }
@@ -38,17 +37,45 @@
 }
 
 .main-nav__item {
-  padding-top: 17px;
-  padding-bottom: 18px;
-  // border-top: 1px solid rgba(255, 255, 255, 0.2);
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  // box-shadow: 1px solid rgba(255, 255, 255, 0.2);
-  // пока не понял как нормально тут сделать (
-  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
-  // box-shadow: 0px 1px 0px 0px rgba(1, 1, 1, 0.2);
+  padding-top: 18px;
+  padding-bottom: 16px;
+
+  @media @mobile {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background-color: @blue-button-hover;
+    }
+
+    &:active {
+      background-color: @blue-button-active;
+    }
+  }
 
   @media @tablet {
     box-shadow: none;
+    width: 239px;
+  }
+}
+
+.main-nav__item:last-child {
+  // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  // box-shadow: 0px -7px 20px 0px rgba(34, 60, 80, 0.2) inset;
+  @media @mobile {
+    box-shadow: inset 0 -7px 7px rgba(0, 0, 0, 0.2);
+    // padding-bottom: 11px;
+  }
+}
+
+.main-nav__item:nth-child(3) {
+  @media @tablet {
+    margin-left: 159px;
+  }
+
+  @media @desktop {
+    margin-left: 246px;
   }
 }
 
@@ -62,5 +89,25 @@
   @media @tablet {
     font-size: 14px;
     color: @black;
+
+    &:hover {
+      color: rgba(129, 179, 210, 1);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &--active {
+      color: rgba(118, 99, 87, 1);
+
+      &:hover {
+        color: rgba(96, 78, 67, 1);
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
+    }
   }
 }

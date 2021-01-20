@@ -1,11 +1,82 @@
 .advantage {
   background-color: @blue-bg;
-  min-height: 206px;
-  padding-top: 32px;
-  padding-bottom: 40px;
+  padding: 24px 24px 24px 22px;
+
+  &--first {
+    padding: 50px 10px 39px;
+
+    @media @tablet {
+      padding: 40px 30px;
+    }
+
+    @media @desktop {
+      padding: 48px 60px;
+    }
+  }
+
+  &--second {
+    padding-top: 39px;
+    padding-bottom: 35px;
+
+    @media @tablet {
+      padding: 44px 30px;
+    }
+
+    @media @desktop {
+      padding-top: 52px;
+    }
+  }
+
+  &--second h3 {
+    @media @desktop {
+      padding: 0 95px;
+    }
+  }
+
+  &--third {
+    padding: 27px 24px 24px 22px;
+
+    @media @tablet {
+      padding: 44px 30px;
+    }
+  }
+
+  &--fourth p {
+    padding: 0 24px;
+
+    @media @tablet {
+      padding: 0 24px;
+    }
+
+    @media @desktop {
+      padding: 0 30px;
+    }
+  }
+
+  &--fifth p {
+    padding: 0 10px;
+
+    @media @tablet {
+      padding: 0 20px;
+    }
+  }
+
+  &--fifth h3 {
+    @media @desktop {
+      padding: 0 95px;
+    }
+  }
 
   &--grey {
     background-color: @grey-bg;
+
+    @media @tablet {
+      padding: 41px 35px 24px;
+    }
+
+    @media @desktop {
+      padding: 43px 35px 24px;
+    }
   }
 
   &--grey:not(:last-child) {
@@ -19,13 +90,11 @@
   @media @tablet {
     width: 256px;
     height: 256px;
-    padding: 45px 30px 50px 30px;
   }
 
   @media @desktop {
     width: 400px;
     height: 256px;
-    padding: 45px 55px 50px 55px;
   }
 }
 
@@ -36,7 +105,8 @@
   font-weight: 700;
 
   @media @tablet {
-    padding: 0 20px;
+    font-size: 21px;
+    padding: 0 23px;
   }
 
   @media @desktop {
@@ -46,7 +116,7 @@
 
 .advantage__number {
   display: block;
-  margin-top: 20px;
+  margin-top: 11px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -54,8 +124,12 @@
 
 .advantage__text {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 17px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+
+  @media @tablet {
+    margin-top: 24px;
+  }
 }

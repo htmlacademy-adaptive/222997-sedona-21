@@ -2,6 +2,13 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
+  margin: 0;
+  margin-top: 8px;
+
+  @media @tablet {
+    grid-area: title;
+    margin: 0;
+  }
 }
 
 .photo__text {
@@ -9,12 +16,30 @@
   line-height: 24px;
   font-weight: 400;
   text-transform: none;
+  margin: 0;
+
+  @media @tablet {
+    grid-area: text;
+    margin: 0;
+  }
 }
 
 .photo__like {
+  display: block;
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
+  margin-top: 13px;
+  padding-left: 38px;
+
+  @media @tablet {
+    grid-area: like;
+    justify-self: end;
+    align-self: center;
+    padding-top: 4px;
+    padding-right: 20px;
+    margin: 0;
+  }
 }
 
 .photo__list {
@@ -22,6 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 648px;
+    padding-top: 48px;
   }
 
   @media @desktop {
@@ -30,6 +56,16 @@
 }
 
 .photo__item {
+  padding: 0 20px;
+  padding-bottom: 16px;
+  border-top: 1px solid rgba(229, 229, 229, 1);
+  position: relative;
+
+  @media @tablet {
+    border: none;
+    padding: 0;
+  }
+
   &--big {
     @media @tablet {
       width: 648px;
@@ -43,10 +79,39 @@
   &--small {
     @media @tablet {
       width: 324px;
+      margin-top: 17px;
     }
 
     @media @desktop {
       width: 400px;
+      margin-top: 0;
     }
+  }
+}
+
+.photo__item--grid {
+  @media @tablet {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title like" "text like";
+    align-items: baseline;
+    padding-top: 12px;
+    padding-left: 20px;
+  }
+
+  @media @desktop {
+    min-height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.photo__pic {
+  @media @mobile {
+    margin-top: 22px;
   }
 }

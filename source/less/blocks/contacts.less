@@ -1,0 +1,148 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 44px;
+
+  @media @tablet {
+    padding-top: 70px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.contacts__wrapper {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 74px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+
+  @media @tablet {
+    position: relative;
+    font-size: 21px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: -2px;
+      width: 124px;
+      height: 1px;
+      margin-right: 62px;
+      border-top: 1px solid rgb(219, 219, 219);
+
+      @media @desktop {
+        width: 280px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -63px;
+      width: 124px;
+      height: 1px;
+      margin-right: 62px;
+      border-top: 1px solid rgb(219, 219, 219);
+
+      @media @desktop {
+        width: 280px;
+      }
+    }
+  }
+}
+
+.contacts__label {
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 10px;
+
+  @media @tablet {
+    margin-top: 20px;
+  }
+
+  @media @desktop {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &--first {
+    margin-top: 15px;
+
+    @media @tablet {
+      margin-top: 20px;
+    }
+
+    @media @desktop {
+      margin: 0;
+    }
+  }
+
+  &--rename {
+    @media @desktop {
+      display: none;
+    }
+  }
+}
+
+.contacts__icon-phone,
+.contacts__icon-email {
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+
+  @media @desktop {
+    padding-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 37px;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    background-color: rgb(230, 230, 230);
+
+    @media @desktop {
+      top: -17px;
+      right: -334px;
+    }
+  }
+}
+
+.contacts__icon-phone::before {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/phone.svg");
+}
+
+.contacts__icon-email::before {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/mail.svg");
+}
+
+.contacts__input {
+  margin-top: 11px;
+
+  @media @desktop {
+    margin: 0;
+    margin-left: 20px;
+    width: 315px;
+  }
+}

@@ -1,16 +1,14 @@
 .main-footer__wrapper {
-  min-height: 120px;
-  padding: 40px 20px 34px;
-
+  padding: 38px 20px 34px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media @tablet {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 36px 60px 20px;
+    padding-top: 37px;
+    padding-left: 60px;
   }
 }
 
@@ -18,4 +16,8 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @desktop {
+    margin-left: 60px;
+  }
 }

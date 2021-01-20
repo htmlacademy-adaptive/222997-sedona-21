@@ -1,0 +1,55 @@
+.introduce {
+  text-align: center;
+
+  @media @tablet {
+    text-align: left;
+    padding-left: 58px;
+  }
+
+  @media @desktop {
+    padding-left: 80px;
+  }
+}
+
+.introduce__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  @media @tablet {
+    font-size: 21px;
+  }
+}
+
+.introduce__label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-top: 20px;
+
+  @media @tablet {
+    margin-top: 20px;
+  }
+
+  &--first {
+    margin-top: 22px;
+
+    @media @tablet {
+      margin-top: 54px;
+    }
+  }
+}
+
+.introduce__label p {
+  margin: 0;
+  margin-right: 14px;
+}
+
+
+.introduce__input {
+  display: flex;
+  flex-grow: 1;
+}

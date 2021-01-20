@@ -1,14 +1,13 @@
 .advantages-header {
   position: relative;
-  height: 226px;
-  padding: 40px 30px;
+  padding: 33px 30px;
 
   @media @tablet {
-    padding: 40px 125px;
+    padding: 43px 128px 54px 129px;
   }
 
   @media @desktop {
-    padding: 40px 355px;
+    padding: 55px 355px 43px;
   }
 }
 
@@ -17,11 +16,15 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 21px;
+  }
 }
 
 .advantages-header__text {
   margin: 0;
-  margin-top: 44px;
+  margin-top: 30px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -31,8 +34,9 @@
     position: absolute;
     width: 320px;
     height: 37px;
-    top: 208px;
-    left: 0;
+    top: 205px;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url("../img/white-triangle.png");
 
     @media @tablet {
