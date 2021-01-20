@@ -11,7 +11,7 @@
 <body class="page__body">
   <header class="page-header">
 
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <picture>
         <source media="(min-width: 1200px)" srcset="img\logotype-desktop.svg" width="186" height="96">
         <source media="(min-width: 768px)" srcset="img\logotype-tablet.svg">
@@ -24,7 +24,7 @@
         <a class="main-nav__link" href="index.html">Главная</a>
       </li>
       <li class="main-nav__item">
-        <a class="main-nav__link" href="#">Фото и видео</a>
+        <a class="main-nav__link main-nav__link--active" href="#">Фото и видео</a>
       </li>
       <li class="main-nav__item">
         <a class="main-nav__link" href="form.html">Форма отзыва</a>
@@ -58,6 +58,12 @@
 
           <li class="photo__item photo__item--big">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img\photo-1-desktop.webp 1x, img\photo-1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img\photo-1-tablet.webp 1x, img\photo-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img\photo-1-mobile.webp 1x, img\photo-1-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img\photo-1-desktop.jpg 1x, img\photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img\photo-1-tablet.jpg 1x, img\photo-1-tablet@2x.jpg 2x">
               <img class="photo__pic" src="img\photo-1-mobile.jpg" srcset="img\photo-1-mobile@2x.jpg 2x"
@@ -66,12 +72,26 @@
             <div class="photo__item--grid">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__text">Автор фото: <span>Борис</span></p>
-              <span class="photo__like">1350</span>
+              <div class="photo__like">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3"
+                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                    fill="black" />
+                </svg>
+                <span class="photo__like-counter">1350</span>
+              </div>
+
             </div>
           </li>
 
           <li class="photo__item photo__item--small">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img\photo-2-desktop.webp 1x, img\photo-2-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img\photo-2-tablet.webp 1x, img\photo-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img\photo-2-mobile.webp 1x, img\photo-2-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img\photo-2-desktop.jpg 1x, img\photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img\photo-2-tablet.jpg 1x, img\photo-2-tablet@2x.jpg 2x">
               <img class="photo__pic" src="img\photo-2-mobile.jpg" srcset="img\photo-2-mobile@2x.jpg 2x"
@@ -80,12 +100,25 @@
             <div class="photo__item--grid">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__text">Автор фото: <span>Сергей</span></p>
-              <span class="photo__like">143</span>
+              <div class="photo__like">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3"
+                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                    fill="black" />
+                </svg>
+                <span class="photo__like-counter">143</span>
+              </div>
             </div>
           </li>
 
           <li class="photo__item photo__item--small">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img\photo-3-desktop.webp 1x, img\photo-3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img\photo-3-tablet.webp 1x, img\photo-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img\photo-3-mobile.webp 1x, img\photo-3-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img\photo-3-desktop.jpg 1x, img\photo-3-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img\photo-3-tablet.jpg 1x, img\photo-3-tablet@2x.jpg 2x">
               <img class="photo__pic" src="img\photo-3-mobile.jpg" srcset="img\photo-3-mobile@2x.jpg 2x"
@@ -94,12 +127,24 @@
             <div class="photo__item--grid">
               <h3 class="photo__title">Дорога на север</h3>
               <p class="photo__text">Автор фото: <span>Петр</span></p>
-              <span class="photo__like">96</span>
+              <div class="photo__like">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3"
+                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                    fill="black" />
+                </svg>
+                <span class="photo__like-counter">96</span>
+              </div>
             </div>
           </li>
 
           <li class="photo__item photo__item--small">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img\photo-4-desktop.webp 1x, img\photo-4-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img\photo-4-tablet.webp 1x, img\photo-4-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img\photo-4-mobile.webp 1x, img\photo-4-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img\photo-4-desktop.jpg 1x, img\photo-4-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img\photo-4-tablet.jpg 1x, img\photo-4-tablet@2x.jpg 2x">
               <img class="photo__pic" src="img\photo-4-mobile.jpg" srcset="img\photo-4-mobile@2x.jpg 2x"
@@ -108,13 +153,18 @@
             <div class="photo__item--grid">
               <h3 class="photo__title">Мост дьявола</h3>
               <p class="photo__text">Автор фото: <span>Антон</span></p>
-              <span class="photo__like">254</span>
+              <div class="photo__like">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3"
+                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                    fill="black" />
+                </svg>
+                <span class="photo__like-counter">254</span>
+              </div>
             </div>
           </li>
         </ul>
       </div>
-
-
 
     </section>
     <section class="video">
@@ -123,10 +173,17 @@
       </p>
       <div class="video__player" src="#">
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img\video-desktop.webp 1x, img\video-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img\video-tablet.webp 1x, img\video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img\video-mobile.webp 1x, img\video-mobile@2x.webp 2x">
+
           <source media="(min-width: 1200px)" srcset="img\video-desktop.jpg 1x, img\video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img\video-tablet.jpg 1x, img\video-tablet@2x.jpg 2x">
           <img src="img\video-mobile.jpg" srcset="img\video-mobile@2x.jpg 2x" alt="Кадр из видео">
         </picture>
+
         <div class="video__control">
           <span class="video__progress-bar"></span>
           <div class="video__buttons">
@@ -135,6 +192,7 @@
             <button class="video__fullscreen-button"></button>
           </div>
         </div>
+
       </div>
     </section>
 
