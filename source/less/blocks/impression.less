@@ -36,6 +36,15 @@
   }
 }
 
+
+.impression__input {
+  opacity: 0;
+
+  &:focus + label::before {
+    outline: 2px solid black;
+  }
+}
+
 .impression__list {
   margin-top: 37px;
   padding-left: 75px;
@@ -51,10 +60,6 @@
   @media @tablet {
     margin-top: 52px;
   }
-}
-
-.impression__input {
-  display: none;
 }
 
 .impression__label {

@@ -68,6 +68,10 @@
 
 .visited__input {
   opacity: 0;
+
+  &:focus + label::before {
+    outline: 2px solid black;
+  }
 }
 
 .visited__label {
@@ -120,7 +124,7 @@
 }
 
 .visited__list {
-  padding-top: 36px;
+  padding-top: 17px;
   padding-left: 80px;
 
   @media @tablet {
@@ -142,18 +146,19 @@
 
 .visited__item:not(:first-child) {
   @media @mobile {
-    margin-top: 54px;
+    margin-top: 36px;
   }
 }
 
 .visited__item {
   @media @tablet {
     width: 202px;
-    margin-top: 60px;
+    margin-top: 43px;
     padding-left: 80px;
   }
 
   @media @desktop {
+    margin-top: 40px;
     width: auto;
   }
 }

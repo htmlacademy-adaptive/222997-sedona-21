@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -20,9 +20,9 @@
   <header class="page-header">
     <a class="page-header__logo">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img\logotype-desktop.svg" width="186" height="96">
-        <source media="(min-width: 768px)" srcset="img\logotype-tablet.svg">
-        <img src="img\logotype-mobile.svg" alt="Седона">
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg" width="186" height="96">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg" alt="Седона">
       </picture>
     </a>
 
@@ -51,7 +51,7 @@
     <section class="intro">
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
       <div class="intro__wrapper">
-        <img class="intro__background" src="img\welcome.svg" alt="Welcome">
+        <img class="intro__background" src="img/welcome.svg" alt="Welcome">
       </div>
     </section>
 
@@ -119,16 +119,16 @@
             <div class="advantages-big-block__pic advantages-big-block__pic--brige">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)"
-                  srcset="img\photo-bridge-desktop.webp 1x, img\photo-bridge-desktop@2x.webp 2x">
+                  srcset="img/photo-bridge-desktop.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img\photo-bridge-tablet.webp 1x, img\photo-bridge-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img\photo-bridge-mobile.webp 1x, img\photo-bridge-mobile@2x.webp 2x">
+                  srcset="img/photo-bridge-tablet.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-bridge-mobile.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
 
                 <source media="(min-width: 1200px)"
-                  srcset="img\photo-bridge-desktop.jpg 1x, img\photo-bridge-desktop@2x.jpg 2x">
+                  srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
-                  srcset="img\photo-bridge-tablet.jpg 1x, img\photo-bridge-tablet@2x.jpg 2x">
-                <img src="img\photo-bridge-mobile.jpg" srcset="img\photo-bridge-mobile@2x.jpg 2x" alt="Фото города">
+                  srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img src="img/photo-bridge-mobile.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фото города">
               </picture>
             </div>
           </div>
@@ -182,33 +182,33 @@
 
   <footer class="main-footer">
     <div class="main-footer__wrapper">
-
       <b class="main-footer__hashtag">#Visitsedona</b>
-
       <ul class="social main-footer__social">
-
         <li class="social__item social__item--twitter">
-          <a class="social__link" href="#"></a>
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
         </li>
-
         <li class="social__item social__item--fb">
-          <a class="social__link" href="#"></a>
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
         <li class="social__item social__item--youtube">
-          <a class="social__link" href="#"></a>
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
         </li>
       </ul>
-
       <div class="develop main-footer__develop">
         <h3 class="develop__title">Разработано</h3>
-
         <a class="develop__link" href="https://htmlacademy.ru/" target="blank">
+          <span class="visually-hidden">HTMLacademy</span>
           <svg class="develop__link-icon" width="27" height="34">
             <use xlink:href="#icon-academy"></use>
           </svg>
         </a>
       </div>
-
     </div>
   </footer>
 
