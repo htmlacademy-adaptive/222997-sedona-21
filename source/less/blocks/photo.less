@@ -1,13 +1,34 @@
+.photo__wrapper {
+  width: 320px;
+
+  @media @tablet {
+    width: 648px;
+    margin: 0 auto;
+    padding: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media @desktop {
+    width: 1200px;
+  }
+}
+
+
 .photo__title {
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
   margin: 0;
-  margin-top: 8px;
+  margin-top: 10px;
 
   @media @tablet {
     grid-area: title;
     margin: 0;
+  }
+
+  @media @desktop {
+    align-self: end;
   }
 }
 
@@ -25,29 +46,42 @@
 }
 
 .photo__like {
-  display: block;
   font-size: 14px;
-  line-height: 24px;
   font-weight: 700;
-  margin-top: 13px;
-  padding-left: 38px;
+  margin-top: 10px;
 
   @media @tablet {
+    width: 85px;
     grid-area: like;
     justify-self: end;
     align-self: center;
-    padding-top: 4px;
-    padding-right: 20px;
     margin: 0;
   }
+
+  .photo__like-counter {
+    margin-left: 11px;
+
+    @media @tablet {
+      margin-left: 5px;
+    }
+  }
 }
+
+.photo__like-icon {
+  fill: rgba(0, 0, 0, 0.3);
+
+  @media @desktop {
+    fill: rgba(255, 255, 255, 1);
+  }
+}
+
 
 .photo__list {
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
     width: 648px;
-    padding-top: 48px;
+    padding-top: 49px;
   }
 
   @media @desktop {
@@ -56,13 +90,18 @@
 }
 
 .photo__item {
-  padding: 0 20px;
-  padding-bottom: 16px;
+  padding: 21px 20px 21px;
   border-top: 1px solid rgba(229, 229, 229, 1);
   position: relative;
 
   @media @tablet {
     border: none;
+    padding: 0;
+    padding-bottom: 16px;
+    background-color: rgba(242, 242, 242, 1);
+  }
+
+  @media @desktop {
     padding: 0;
   }
 
@@ -79,24 +118,28 @@
   &--small {
     @media @tablet {
       width: 324px;
-      margin-top: 17px;
     }
 
     @media @desktop {
       width: 400px;
-      margin-top: 0;
+    }
+  }
+
+  &--darken {
+    @media @tablet {
+      background-color: rgba(234, 234, 234, 1);
     }
   }
 }
 
-.photo__item--grid {
+.photo__item-wrapper {
   @media @tablet {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "title like" "text like";
     align-items: baseline;
-    padding-top: 12px;
+    padding-top: 16px;
     padding-left: 20px;
   }
 
@@ -107,11 +150,10 @@
     width: 100%;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 0;
   }
 }
 
 .photo__pic {
-  @media @mobile {
-    margin-top: 22px;
-  }
+  display: block;
 }

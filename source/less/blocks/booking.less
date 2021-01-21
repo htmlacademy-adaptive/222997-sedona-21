@@ -47,10 +47,13 @@
   justify-content: center;
   align-self: center;
   align-items: center;
+  text-transform: uppercase;
+  border: none;
   margin-top: 29px;
   width: 280px;
   height: 58px;
   background-color: @blue-bg;
+  outline: none;
   color: @white;
   font-size: 21px;
   line-height: 26px;
@@ -71,12 +74,12 @@
 
   &:active {
     background-color: @blue-button-active;
-    color: fadeout(@white, 30%);
+    color: rgba(255, 255, 255, 0.3);
   }
 
-  // &--disabled {
-  //   @media @tablet {
-  //    background-color: rgba(229, 229, 229, 1);
-  //   }
-  // }
+  &:disabled {
+    box-sizing: border-box;
+    border: 2px solid rgba(129, 179, 210, 1);
+    background-color: rgba(229, 229, 229, 1);
+  }
 }

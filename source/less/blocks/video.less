@@ -1,15 +1,16 @@
 .video {
   border-top: 1px solid rgba(229, 229, 229, 1);
   padding-top: 32px;
-  padding-bottom: 39px;
+  padding-bottom: 102px;
 
   @media @tablet {
     border: none;
-    padding-top: 74px;
+    padding-top: 57px;
+    padding-bottom: 36px;
   }
 
   @media @desktop {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 82px;
   }
 }
@@ -47,8 +48,8 @@
 
 .video__player {
   display: block;
-  margin-top: 35px;
-  // position: relative;
+  margin-top: 33px;
+  position: relative;
 
   @media @tablet {
     margin-top: 80px;
@@ -62,15 +63,139 @@
 
 .video__control {
   display: block;
-  // position: absolute;
+  position: absolute;
   width: 280px;
   height: 111px;
-  background-color: grey;
-  opacity: 0.3;
-  margin: 0 auto;
-  margin-top: -48px;
+  margin: 0 20px;
+  top: 156px;
 
   @media @tablet {
-    margin-top: -114px;
+    margin: 0;
+    width: 648px;
+  }
+
+  @media @desktop {
+    width: 800px;
+  }
+}
+
+.video__progress-bar {
+  display: block;
+  width: 280px;
+  height: 45px;
+  padding: 22px 24px 0 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @media @tablet {
+    position: absolute;
+    bottom: -232px;
+    width: 648px;
+    height: 91px;
+    padding: 44px 166px 0 93px;
+  }
+
+  @media @desktop {
+    margin-left: 140px;
+    width: 800px;
+  }
+}
+
+.video__progress-bar-scale {
+  display: block;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__progress-bar-btn {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 19px;
+  left: 58px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 1);
+  border: 4px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+
+  @media @tablet {
+    top: 41px;
+    left: 207px;
+  }
+}
+
+.video__buttons {
+  width: 280px;
+  height: 66px;
+  background-color: rgba(242, 242, 242, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 29px 0 19px;
+
+  @media @tablet {
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    bottom: -195px;
+    padding: 0 47px 0 29px;
+  }
+
+  @media @desktop {
+    margin-left: 140px;
+  }
+}
+
+.video__buttons button {
+  background-color: transparent;
+}
+
+.video__replay-button {
+  width: 16px;
+  height: 20px;
+  border: none;
+}
+
+.video__sub-button {
+  width: 32px;
+  height: 20px;
+  border: none;
+  margin-left: 105px;
+
+  @media @tablet {
+    margin-left: 441px;
+  }
+
+  @media @desktop {
+    margin-left: 592px;
+  }
+}
+
+.video__fullscreen-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+.video__replay-button,
+.video__sub-button,
+.video__fullscreen-button {
+  border: none;
+  outline: none;
+
+  @media @mobile {
+    fill: rgba(92, 104, 112, 1);
+  }
+
+  @media @tablet {
+    fill: rgba(255, 255, 255, 1);
+  }
+
+  &:hover {
+    fill: rgba(51, 51, 51, 1);
+  }
+
+  &:active {
+    fill: rgba(51, 51, 51, 0.3);
   }
 }
