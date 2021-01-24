@@ -94,7 +94,7 @@
 }
 
 .contacts__icon-phone span {
-    @media @desktop {
+  @media @desktop {
     display: none;
   }
 }
@@ -131,6 +131,10 @@
 
 .contacts__icon-email {
   &::before {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("../img/mail.svg");
+
     @media @desktop {
       left: 423px;
     }
@@ -141,12 +145,6 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../img/phone.svg");
-}
-
-.contacts__icon-email::before {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url("../img/mail.svg");
 }
 
 .contacts__input {
