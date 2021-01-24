@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -20,13 +22,13 @@
   <header class="page-header">
     <a class="page-header__logo">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg" width="186" height="96">
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
         <img src="img/logotype-mobile.svg" alt="Седона">
       </picture>
     </a>
 
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
@@ -73,16 +75,11 @@
             </div>
             <div class="advantages-big-block__pic advantages-big-block__pic--town">
               <picture>
-
                 <source type="image/webp" media="(min-width: 1200px)"
                   srcset="img/photo-city-desktop.webp 1x, img/photo-city-desktop@2x.webp 2x">
-
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/photo-city-tablet.webp 1x, img/photo-city-tablet@2x.webp 2x">
-
                 <source type="image/webp" srcset="img/photo-city-mobile.webp 1x, img/photo-city-mobile@2x.webp 2x">
-
-
                 <source media="(min-width: 1200px)"
                   srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -96,16 +93,16 @@
         <div class="advantages-small-block">
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--first">
-              <h3 class="advantage__title">Жилье</h3>
-              <p class="advantage__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <h3>Жилье</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="advantages__item advantages__item--third">
-              <h3 class="advantage__title">Сувениры</h3>
-              <p class="advantage__text">Не только китайского,<br class="new-line"> но и местногопроизводства!</p>
+              <h3>Сувениры</h3>
+              <p>Не только китайского,<br class="new-line"> но и местногопроизводства!</p>
             </li>
             <li class="advantages__item advantages__item--second">
-              <h3 class="advantage__title">Еда</h3>
-              <p class="advantage__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <h3>Еда</h3>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
           </ul>
         </div>
@@ -158,7 +155,7 @@
 
           </div>
         </div>
-
+      </div>
     </section>
 
     <section class="booking">
@@ -168,14 +165,16 @@
         <p class="booking__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие
           предложения гостиниц в
           седоне</p>
-        <button class="booking__button booking__button--disabled">Найти гостиницу</button>
+        <a href="#" class="booking__button booking__button--disabled">Найти гостиницу</a>
       </div>
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Карта и наши социальные сети</h2>
       <div class="map__wrapper">
-        <div class="map__pic"></div>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A0786a96d4918a40b8e46abad45939e86651f12ac602839fb8f0198d1ae892979&amp;source=constructor"
+          ></iframe>
       </div>
     </section>
 
@@ -214,18 +213,18 @@
   </footer>
 
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
 
-    navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove("main-nav--nojs");
 
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
+    navToggle.addEventListener("click", function () {
+      if (navMain.classList.contains("main-nav--closed")) {
+        navMain.classList.remove("main-nav--closed");
+        navMain.classList.add("main-nav--opened");
       } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add("main-nav--closed");
+        navMain.classList.remove("main-nav--opened");
       }
     });
   </script>

@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -38,13 +40,13 @@
 
     <a class="page-header__logo" href="index.html">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg" width="186" height="96">
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
         <img src="img/logotype-mobile.svg" alt="Седона">
       </picture>
     </a>
 
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -86,16 +88,16 @@
       <div class="introduce">
         <h3 class="introduce__title">Представьтесь:</h3>
         <label class="introduce__label introduce__label--first" for="name">
-          <p>Имя*:</p>
+          <span>Имя*:</span>
           <input class="introduce__input base-input" type="text" name="name" id="name" placeholder="Петр" required>
         </label>
         <label class="introduce__label" for="surname">
-          <p>Фамилия*:</p>
+          <span>Фамилия*:</span>
           <input class="introduce__input base-input" type="text" name="surname" id="surname" placeholder="Иванов"
             required>
         </label>
         <label class="introduce__label" for="patronymic">
-          <p>Отчество:</p>
+          <span>Отчество:</span>
           <input class="introduce__input base-input" type="text" name="patronymic" id="patronymic"
             placeholder="Александрович">
         </label>
@@ -105,14 +107,14 @@
         <h3 class="contacts__title">Контактная информация:</h3>
         <div class="contacts__wrapper">
           <label class="contacts__label contacts__label--first" for="phone">
-            <p class="contacts__icon-phone"><span class="contacts__label--rename">Контактный</span> телефон*:</p>
-            <input class="contacts__input contacts__input-phone base-input" type="number" name="phone" id="phone"
+            <span class="contacts__icon-phone"><span>Контактный</span> телефон*:</span>
+            <input class="contacts__input contacts__input-phone base-input" type="tel" name="phone" id="phone"
               placeholder="Введите телефон" required>
           </label>
 
           <label class="contacts__label" for="email">
-            <p class="contacts__icon-email">Электронная почта*:</p>
-            <input class="contacts__input contacts__input-email base-input" type="text" name="email" id="email"
+            <span class="contacts__icon-email">Электронная почта*:</span>
+            <input class="contacts__input contacts__input-email base-input" type="email" name="email" id="email"
               placeholder="Введите e-mail" required>
           </label>
         </div>
@@ -224,18 +226,18 @@
   </div>
 
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
 
-    navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove("main-nav--nojs");
 
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
+    navToggle.addEventListener("click", function () {
+      if (navMain.classList.contains("main-nav--closed")) {
+        navMain.classList.remove("main-nav--closed");
+        navMain.classList.add("main-nav--opened");
       } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add("main-nav--closed");
+        navMain.classList.remove("main-nav--opened");
       }
     });
   </script>

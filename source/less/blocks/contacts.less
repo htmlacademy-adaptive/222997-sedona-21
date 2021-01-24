@@ -91,11 +91,11 @@
       margin: 0;
     }
   }
+}
 
-  &--rename {
+.contacts__icon-phone span {
     @media @desktop {
-      display: none;
-    }
+    display: none;
   }
 }
 
@@ -112,15 +112,27 @@
   &::before {
     content: "";
     position: absolute;
-    top: 37px;
-    right: 0;
+    top: 33px;
+    left: 221px;
     width: 58px;
     height: 58px;
     background-color: rgb(230, 230, 230);
 
+    @media @tablet {
+      left: 590px;
+    }
+
     @media @desktop {
+      left: 346px;
       top: -16px;
-      right: -334px;
+    }
+  }
+}
+
+.contacts__icon-email {
+  &::before {
+    @media @desktop {
+      left: 423px;
     }
   }
 }
