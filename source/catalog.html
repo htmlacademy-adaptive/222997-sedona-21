@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -38,13 +40,13 @@
 
     <a class="page-header__logo" href="index.html">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg" width="186" height="96">
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
         <img src="img/logotype-mobile.svg" alt="Седона">
       </picture>
     </a>
 
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -88,18 +90,22 @@
         <ul class="photo__list">
 
           <li class="photo__item photo__item--big">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
-              <img class="photo__pic" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
-                alt="Фотография дороги и заката">
-            </picture>
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="photo__pic" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
+                  alt="Фотография дороги и заката">
+              </picture>
+            </a>
+
             <div class="photo__item-wrapper">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__text">Автор фото: <span>Борис</span></p>
@@ -114,18 +120,20 @@
           </li>
 
           <li class="photo__item photo__item--small">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-              <img class="photo__pic" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"
-                alt="Фотография растений">
-            </picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="photo__pic" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"
+                  alt="Фотография растений">
+              </picture>
+            </a>
             <div class="photo__item-wrapper">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__text">Автор фото: <span>Сергей</span></p>
@@ -139,18 +147,20 @@
           </li>
 
           <li class="photo__item photo__item--small photo__item--darken">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-              <img class="photo__pic" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"
-                alt="Фотография дороги">
-            </picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="photo__pic" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"
+                  alt="Фотография дороги">
+              </picture>
+            </a>
             <div class="photo__item-wrapper">
               <h3 class="photo__title">Дорога на север</h3>
               <p class="photo__text">Автор фото: <span>Петр</span></p>
@@ -164,17 +174,19 @@
           </li>
 
           <li class="photo__item photo__item--small">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
-              <img class="photo__pic" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x"
-                alt="Фотография мост дьявола">
-            </picture>
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                <img class="photo__pic" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x"
+                  alt="Фотография мост дьявола">
+              </picture>
+            </a>
             <div class="photo__item-wrapper">
               <h3 class="photo__title">Мост дьявола</h3>
               <p class="photo__text">Автор фото: <span>Антон</span></p>
@@ -276,18 +288,18 @@
   </footer>
 
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
 
-    navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove("main-nav--nojs");
 
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
+    navToggle.addEventListener("click", function () {
+      if (navMain.classList.contains("main-nav--closed")) {
+        navMain.classList.remove("main-nav--closed");
+        navMain.classList.add("main-nav--opened");
       } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add("main-nav--closed");
+        navMain.classList.remove("main-nav--opened");
       }
     });
   </script>
